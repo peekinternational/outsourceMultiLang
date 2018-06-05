@@ -28,6 +28,7 @@ app.controller('ProjectsController', ['$scope', '$rootScope', '$filter', 'Socket
       $http.post("/api/packageProjects/"+$stateParams.projectId).then(function(res){
 
       /*download Agreemnt PDF code*/
+   
       var docDefinition = { content: [
           {
             text:"Non-Disclosure Agreement",
@@ -46,7 +47,7 @@ app.controller('ProjectsController', ['$scope', '$rootScope', '$filter', 'Socket
           {text:"7. This Agreement shall not be amended or modified, and none of the provisions shall be waived, except in writing signed on behalf of the parties or, in the case of a waiver, on behalf of the party making the waiver.",margin:[0,0,0,5]},
           {text:"----------------------------------------------------------------------------------------------------------------------------------------------------------",margin:[0,10,0,10]},
           {text:"This Agreement relates to the confidentiality agreed upon for the project:",margin:[0,0,0,5]},
-          {text:res.data.name+"  listed "+res.data.created,margin:[0,0,0,5]},
+          {text:res.data.name+ "  中英文测试   "+"  listed "+res.data.created,margin:[0,0,0,5]},
           {
             columns: [
             {
@@ -79,6 +80,7 @@ app.controller('ProjectsController', ['$scope', '$rootScope', '$filter', 'Socket
           
         ],
         styles:{
+         font:"Roboto",
           header:{
             fontSize:25,
             color:"skyblue",

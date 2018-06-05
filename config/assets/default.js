@@ -35,6 +35,9 @@ module.exports = {
         // custom add
         'public/lib/angular-animate/angular-touch.js',
         'public/lib/angular-animate/angular-touch.min.js',
+
+      
+
         //ends custom add 
         'public/lib/angular-password/angular-password.js',
         'public/lib/angular-messages/angular-messages.js',

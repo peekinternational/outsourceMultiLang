@@ -24,13 +24,14 @@ body {
     <form name="contestForm" novalidate>
 
 	<div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 p-ml-none p-mr-none col-md-offset-1">
-		<strong style="font-size:23px;color:#5f5b56;" class="h3-mobile-font"><img src="modules/contests/client/img/contest_icon2.png"> 콘테스트 개최 무료등록 시작</strong><br><br>
+		<strong style="font-size:23px;color:#5f5b56;" class="h3-mobile-font"><img src="modules/contests/client/img/contest_icon2.png" > <span translate="StartRegistrationOfContest"></span></strong><br><br>
 	  </div>
 
 	<div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 p-ml-none p-mr-none col-md-offset-1">
-		<strong class="p-ml-none prjct-list-font" style="padding-left: 42px;"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i> 아래 <span class="contest_question" style="padding-bottom:12px;">
-              <span>1</span></span> 번부터 <span class="contest_question" style="padding-bottom:12px;">
-              <span>5</span></span> 번까지 필수 등록항목이며 아래 번호 순서대로 빠짐없이 작성하셔야 콘테스트 무료 등록이 가능합니다!</strong><br><br>
+		<strong class="p-ml-none prjct-list-font" style="padding-left: 42px;"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i> <span translate="Below"></span> <span class="contest_question" style="padding-bottom:12px;">
+              <span>1</span></span> <span translate="From"></span> <span class="contest_question" style="padding-bottom:12px;">
+              <span>5</span></span> <span translate="RequiredItemsMustFilloutInTheOrder"></span></strong><br><br>
+              <!-- <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"> <span translate="BelowRequiredItemsFrom1to5FillInTheOrder"></span> -->
 	</div>
     
       <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 p-ml-none p-mr-none col-md-offset-1">
@@ -42,7 +43,7 @@ body {
           <div class="form-group p-t-sm col-md-offset-1" style="margin-top:30px">
             <p class="contest_question prjct-list-font" style="padding-bottom:12px;">
               <span>1</span>
-              콘테스트 유형을 선택 하십시오.
+              <b translate="SelectContestType"></b> 
             </p>
             
             <select selector class="prjct-name" change="selectCat()"
@@ -86,10 +87,10 @@ body {
           <div class="form-group col-md-offset-1">
             <p class="contest_question prjct-list-font" style="padding-bottom:12px">
               <span>2</span>
-              콘테스트 제목을 입력 하십시오.
+              <b translate="EnterTitleContest"></b> 
             </p>
 
-            <p class="sub-heading"><b>콘테스트 제목</b> <span  popover-title="콘테스트 제목" uib-popover="콘테스트 개최에 프리랜서들을 많이 지원하기위해서는 콘테스트 제목이 중요합니다. 가능한 정확한 단어로 간단 명료하게 작성해 주시길 바랍니다." popover-trigger="'mouseenter'"><i class="fa fa-question-circle-o" aria-hidden="true" style="font-size:20px;"></i></span></p>
+            <p class="sub-heading"><b translate="ContestTitle"></b> <span  popover-title="콘테스트 제목" uib-popover="콘테스트 개최에 프리랜서들을 많이 지원하기위해서는 콘테스트 제목이 중요합니다. 가능한 정확한 단어로 간단 명료하게 작성해 주시길 바랍니다." popover-trigger="'mouseenter'"><i class="fa fa-question-circle-o" aria-hidden="true" style="font-size:20px;"></i></span></p>
             <input type="text" class="form-control prjct-name" ng-model="contest.name" name="contest_name" required></input>
 <br><br>
           </div> 
@@ -99,10 +100,11 @@ body {
           <div class="form-group col-md-offset-1"> 
             <p class="contest_question prjct-list-font">
               <span>3</span>
-			  콘테스트에 내용을 작성하십시오
+              <b translate="FillContest"></b> 
+			  
 		  </p>
             <p class="sub-heading prjct-list-font" style="margin-top:30px">
-              <b>콘테스트 개최에 요구되는 전문기술</b>
+              <b translate="ExpertiesRequired"></b>
               <span  popover-title="콘테스트 개최에 요구되는 전문기술" uib-popover="콘테스트 개최에 요구되는 전문기술을 선택할 경우 콘테스트 목록에서 요구사항을 표시해 줍니다." popover-trigger="'mouseenter'"><i class="fa fa-question-circle-o" aria-hidden="true" style="font-size:20px;"></i></span>
             </p>
 
@@ -115,7 +117,7 @@ body {
             </select>
 			<br><br>
             <p class="sub-heading top-space" style="margin-top:40px">
-              <b>콘테스트 내용</b>
+              <b translate="ContentExpenditure"></b>
               <span  popover-title="콘테스트 내용" uib-popover="콘테스트 개최에 관한 내용을 자세히 작성해야 합니다. 프리랜서들은 콘테스트 내용을 확인하고 지원 할 수 있습니다. 콘테스트 내용은 최소 300자 이상 작성 바랍니다. 콘테스트 작성이 어려울 경우 아웃소싱오케이 고객문의(support@outsourcingok.com)에 등록하면 담당자가 도와 드립니다." popover-trigger="'mouseenter'"><i class="fa fa-question-circle-o" aria-hidden="true" style="font-size:20px;"></i></span>
             </p>
 			     <!-- <textarea  class="form-control porjct-desp" rows="6" name="description" ng-model="contest.description" placeholder="콘테스트 내용 작성요령을 참조바라며 정확히 작성해야만 프리랜서들로부터 많은 관심과 지원을 받을 수 있습니다...[최소300자 이상 작성하기 바랍니다!]" required></textarea> -->
@@ -131,7 +133,7 @@ body {
                 <input  type="file" nv-file-select=""  uploader="uploader"> 
                 
                 <div ng-show="uploader.queue.length>0">
-                  <div>파일이름: {{ item.file.name }}</div>
+                  <div><spa translate="FileName"></spa>: {{ item.file.name }}</div>
                   <div>파일크기: {{ item.file.size/1024/1024|number:2 }} Mb</div>
                   <div ng-show="uploader.isHTML5">
                       진행상황: {{ item.progress +'%'}}
@@ -155,7 +157,7 @@ body {
               </div>
               <div class="col-sm-6">
                 <!-- <p>Drag and drop any images or documents that might be helpful in explaining your project brief here</p> -->
-              <p class="prjct-list-font"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i> 첨부파일 2MB 이하 [파일선택후 업로드확인]</p>
+              <p class="prjct-list-font"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i><span translate="AttachmentSize"></span> </p>
                 
               </div>
             </div>
@@ -170,7 +172,7 @@ body {
 
             <p class="contest_question prjct-list-font" style="padding-bottom:12px">
               <span>4</span>
-             콘테스트 지출 예산<p style="font-size:13px;padding-left:20px;"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i> <!-- 맨앞숫자가 0부터시작해도 상관없습니다. --> 상금시작 단위는 10,000원[일만원] 부터 시작을 권장합니다.  <span style="color:#820923;">[콘테스트 상금 1억원 이상인 경우 아웃소싱 오케이에 별도 문의]</span></p>
+             <b translate="ContentExpenditure"></b><p style="font-size:13px;padding-left:20px;"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i> <!-- 맨앞숫자가 0부터시작해도 상관없습니다. --> <span translate="RecomendedStartingPrizeValue"></span> <span style="color:#820923;" translate="PrizeMoneyOver100Million"></span></p>
             </p>
 
             <div class="row row m-l-xs m-r-xs thumbnail p-t-md p-b-lg porjct-desp">
@@ -201,10 +203,10 @@ body {
           <div class="form-group col-md-offset-1">
             <p class="contest_question" style="padding-bottom:12px">
               <span>5</span>
-              콘테스트 기간
+             <b translate="ConatestPeriod"></b>
             </p>
 
-			<p style="font-size:13px;padding-left:20px;padding-top:5px;" class="prjct-list-font"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i> 콘테스트 개최 마감이후부터 7 일내에 수상자가 선정되지않으면 지원자들에게 1/n로 지급됩니다.</p>
+			<p style="font-size:13px;padding-left:20px;padding-top:5px;" class="prjct-list-font"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i> <span translate="IfWinnerNotSelected"></span></p>
 
             <div class="input-group prjct-name">
                     <span class="input-group-addon text-muted">일(Days)  
@@ -219,9 +221,9 @@ body {
 
           <p class="contest_question prjct-list-font">
             <span>6</span>
-           아웃소싱오케이 서비스 [선택사항]
+           <b translate="OutsourcingOkService"></b>
           </p>
-		 <p style="padding-top:5px;padding-left:10px;" class="prjct-list-font"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i>  안내:아웃소싱 오케이 서비스 이용시 등록 건별로 이용료[부가세 별도]가 부과되며 취소 및 환불을 할 수 없습니다.</p>
+		 <p style="padding-top:5px;padding-left:10px;" class="prjct-list-font"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:#820923;"></i><span translate="NoteOutsourcingOk"></span> </p>
 
           <hr/>
 
@@ -234,13 +236,13 @@ body {
             </div>
             <!-- Mobile View -->
             <div class="col-sm-2 col-xs-6 hidden-md hidden-lg text-right">
-			   <span><span><strike>₩ 5,000원</strike><br>{{contest.currency.symbol_native}} {{ latestCurrencyRate[contest.currency.code]*pakagePrices.pakage_1 | number:0}}원 <br>[무료 이벤트]</span>	</span>
+			   <span><span><strike translate="Won5000"></strike><br>{{contest.currency.symbol_native}} {{ latestCurrencyRate[contest.currency.code]*pakagePrices.pakage_1 | number:0}}원 <br>[무료 이벤트]</span>	</span>
                <!-- <span>{{contest.currency.symbol_native}} {{ latestCurrencyRate[contest.currency.code]*pakagePrices.pakage_1 | number:0}}원</span> -->
             </div>
             <!-- End -->
             <div class="col-sm-7 col-xs-12">
-              <h3 class="title h3-mobile-font">채팅이용은 프로젝트의 높은 성공의 지표입니다. 등록건별 무제한 채팅이용!</h3>
-			         <p class="prjct-list-font">등록건별로 콘테스트가 완성될때까지 언제 어디서나 무제한 채팅이용할 수 있으며, 단 콘테스트 등록이 다를경우 별도 구매 하셔야합니다. &nbsp;&nbsp;<span ng-click="chat = !chat" style="font-size:10px;padding-left:20px;background:#6b0816;border-radius: 3px;padding:5px;color:#fff;cursor: pointer; cursor: hand;">주의▶</span></p>
+              <h3 class="title h3-mobile-font" translate="UsingChat"></h3>
+			         <p class="prjct-list-font"><span translate="UnlimitedChatBuyChat"></span> &nbsp;&nbsp;<span ng-click="chat = !chat" style="font-size:10px;padding-left:20px;background:#6b0816;border-radius: 3px;padding:5px;color:#fff;cursor: pointer; cursor: hand;" translate="Caution"></span></p>
 			         <span ng-show="chat">
 			         <p class="prjct-list-font"><span style="color:#920923">[보안과 안전성을 이유로 반드시 구글크롬을 이용해야 합니다.]</span></p>
               <p class="prjct-list-font">아웃소싱오케이 실시간채팅 서비스는 의뢰인과 함께 콘테스트 공개 포럼을 거쳐 채팅으로 상담한&nbsp;&nbsp; 1차합격자 프리랜서(의뢰인이 선택한 프리랜서를 칭함)들로부터 콘테스트 시작부터 완료까지 전체 과정을 실시간회의를 거쳐 수상자를 선정 할 수 있습니다. 채팅 서비스 이용 구매시 1:1 화상채팅은 무료로 이용할 수 있습니다.</p>
@@ -263,7 +265,7 @@ body {
 			  </ul>
 			  </span>
 
-			  <p><b>무료 이벤트 행사 [6월30일까지]</b></p>
+			  <p><b translate="FreeEventJune"></b></p>
 			  
             </div>
             <div class="col-sm-2 col-xs-5 hidden-xs">
@@ -288,8 +290,8 @@ body {
             </div>
             <!-- End -->
             <div class="col-sm-7 col-xs-12">
-              <h3 class="title h3-mobile-font">1차 콘테스트 합격자 선택 후 사용할 경우 높은 성공률!</h3>
-              <p class="prjct-list-font" style="color:#898989">본 화상서비스는 채팅서비스를 구매해야만 별도의 화면으로 이동하여 1:1 실시간 화상채팅 무료 이용이 가능합니다.&nbsp;&nbsp;<span ng-click="videochat = !videochat" style="font-size:10px;margin-left:13px;padding-left:20px;background:#2f70a9;border-radius: 3px;padding:5px;color:#fff;cursor: pointer; cursor: hand;">안내▶</span></p>
+              <h3 class="title h3-mobile-font" translate="HighSuccessRate"></h3>
+              <p class="prjct-list-font" style="color:#898989"><span translate="VideoService"></span>&nbsp;&nbsp;<span ng-click="videochat = !videochat" style="font-size:10px;margin-left:13px;padding-left:20px;background:#2f70a9;border-radius: 3px;padding:5px;color:#fff;cursor: pointer; cursor: hand;" translate="btnIntro"></span></p>
 			  <span ng-show="videochat">
 			  <p class="prjct-list-font">화상(비디오)은 저장을 할 수 없는 기능이오니 여기에 관련하여 문제가 발생될 경우 아웃소싱오케이에서는 일체의 책임을 지지 않으며 안전성을 위해서 구글크롬 사용으로만 최적화되어 있습니다. 만약 IE(인터넷 익스플로러) 사용시에 아웃소싱 오케이는 일체 책임지지 않습니다.</p>
 
